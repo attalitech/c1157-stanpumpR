@@ -10,7 +10,7 @@ ui <- function(request) {
         tags$a(
           href = config$help_link,
           id = "help_link",
-          "Examples and Help1",
+          "Examples and Help3",
           target = "_blank"
         )
       )
