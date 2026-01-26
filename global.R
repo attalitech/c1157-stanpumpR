@@ -1,4 +1,5 @@
 options(warn = 1)
+library(stanpumpR)
 
 isShinyLocal <- Sys.getenv('SHINY_PORT') == ""
 
