@@ -31,6 +31,7 @@ Imports:
   shiny,
   shinyBS,
   shinydashboard,
+  shinydisconnect,
   shinyjs,
   tidyr,
   tryCatchLog,
