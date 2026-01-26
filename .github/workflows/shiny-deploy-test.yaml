@@ -34,9 +34,10 @@ jobs:
             any::rsconnect
             any::remotes
 
-      - name: Install stanpumpR package
+      - name: Install stanpumpR package from GitHub
         run: |
-          remotes::install_local(".", force = TRUE)
+          pkg_ref <- paste0("${{ github.repository }}@", "${{ github.event.pull_request.head.sha || github.sha }}")
+          remotes::install_github(pkg_ref, upgrade = "never", force = TRUE)
         shell: Rscript {0}
 
       - name: Authorize and deploy app
