@@ -18,6 +18,8 @@ getDrugDefaultsGlobal <- function(expand = TRUE)
     system.file("extdata", "drugDefaults_global.csv", package = "stanpumpR"),
     na.strings = ""
   )
+
+  
   if (expand) {
     drugDefaultsDataset$Units <- drugUnitsExpand(drugDefaultsDataset$Units)
   }
