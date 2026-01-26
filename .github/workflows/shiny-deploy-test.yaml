@@ -32,7 +32,12 @@ jobs:
           cache-version: 2
           extra-packages: |
             any::rsconnect
-            local::.
+            any::remotes
+
+      - name: Install stanpumpR package
+        run: |
+          remotes::install_local(".", force = TRUE)
+        shell: Rscript {0}
 
       - name: Authorize and deploy app
         run: |
