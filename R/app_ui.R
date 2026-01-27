@@ -2,10 +2,7 @@
 
 # UI ------------------------------------------------------
 app_ui <- function() {
-  e <- new.env()
-  load("data/sysdata.rda", envir=e)
-  js_drug_defaults <- paste0("var drug_defaults=",jsonlite::toJSON(rlang::env_get(e, "drugDefaults_global")))
-  rm(e)
+  js_drug_defaults <- paste0("var drug_defaults=",jsonlite::toJSON(stanpumpR::drugDefaults_global))
   config <- .sprglobals$config
 
   function(request) {
