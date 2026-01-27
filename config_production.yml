@@ -1,5 +1,9 @@
 default:
   title: "stanpumpR v1.1"
+  # Email credentials are intentionally empty for security
+  # If email functionality is needed, configure these via:
+  # - shinyapps.io application settings (recommended for production)
+  # - Local config.yml file (for development only, keep this file git-ignored)
   email_username: ""
   email_password: ""
   maintainer_name: "Steve"

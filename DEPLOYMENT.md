@@ -99,7 +99,18 @@ If you need to modify the configuration after deployment:
 2. Or create/edit a `config.yml` file for local testing (this file is git-ignored)
 3. Redeploy using the command in step 4
 
-Note: The `config_production.yml` file contains safe defaults without any secrets. If you need to add email functionality or other features requiring credentials, you should configure these through environment variables or shinyapps.io application settings rather than committing secrets to the repository.
+**Note on secrets and credentials**: The `config_production.yml` file contains safe defaults without any secrets. If you need to add email functionality or other features requiring credentials, you have several options:
+
+- **Option 1 (Recommended)**: Use shinyapps.io environment variables
+  1. Log in to your shinyapps.io dashboard
+  2. Navigate to your application settings
+  3. Go to the "Vars" tab
+  4. Add environment variables (e.g., `EMAIL_USERNAME`, `EMAIL_PASSWORD`)
+  5. Access them in your code with `Sys.getenv("EMAIL_USERNAME")`
+
+- **Option 2**: Create a local `config.yml` file with secrets for testing (never commit this file)
+
+- **Option 3**: Use secure credential management services (e.g., AWS Secrets Manager, Azure Key Vault)
 
 ## Alternative: Using RStudio
 
