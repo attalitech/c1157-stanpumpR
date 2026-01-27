@@ -1,0 +1,8 @@
+default:
+  title: "stanpumpR v1.1"
+  email_username: ""
+  email_password: ""
+  maintainer_name: "Steve"
+  maintainer_email: "stanpumpR@gmail.com"
+  help_link: "https://steveshafer.shinyapps.io/stanpumpR_HelpPage"
+  debug: FALSE

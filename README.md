@@ -32,10 +32,14 @@ Near-term future developments in stanpumpR will include
 1. Open the `stanpumpR.Rproj` file in RStudio
 1. Install the devtools package via `install.packages("devtools")`.
 1. Install all package dependencies via `devtools::install_deps(dependencies = TRUE)`
-1. Make a copy of the file `config.yml.sample` as a new file named `config.yml`. This `config.yml` is a configuration file that stanpumpR needs. You can change the settings inside it.
+1. For local development, you can create a `config.yml` file based on `config.yml.sample` to customize settings. If you don't create one, the app will use the production defaults from `config_production.yml`.
 1. Run the app from the RStudio Console:
 - `devtools::load_all(".")`
 - `run_app()`
+
+#### Deploying to shinyapps.io
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions on deploying this app to shinyapps.io.
 
 #### Running tests
 1. Install the devtools package via `install.packages("devtools")`.

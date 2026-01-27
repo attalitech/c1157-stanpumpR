@@ -12,3 +12,6 @@
 ^Slides$
 ^Original Stanpump$
 ^\.secrets$
+^app\.R$
+^config_production\.yml$
+^DEPLOYMENT\.md$
