@@ -49,7 +49,7 @@ run_app <- function(config_file = "config.yml") {
     legend.key = ggplot2::element_blank()
   )
 
-  shiny::addResourcePath("stanpumpr-assets", system.file("shiny", "www", package = "stanpumpR"))
+  shiny::addResourcePath("stanpumpr-assets", system.file("www", package = "stanpumpR"))
 
   shiny::shinyApp(app_ui(), app_server, enableBookmarking = "url")
 }
