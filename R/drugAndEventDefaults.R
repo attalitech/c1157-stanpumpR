@@ -19,11 +19,10 @@ getDrugDefaultsGlobal <- function(expand = TRUE)
     na.strings = ""
   )
 
-  
-  
   if (expand) {
     drugDefaultsDataset$Units <- drugUnitsExpand(drugDefaultsDataset$Units)
   }
+
   drugDefaultsDataset
 }
 

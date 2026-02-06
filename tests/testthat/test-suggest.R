@@ -1,13 +1,7 @@
-## TODO factors -> strings
-
-outputComments <<- function(..., echo) {
-  ## just silence
-  ## print(paste("outputComments:", ...))
-}
-
-DEBUG <<- FALSE
-
 test_that("suggest yields a table with the appropriate columns", {
+
+  local_mocked_bindings(outputComments = function(..., echo) {})
+  .sprglobals$DEBUG <- FALSE
 
   drugList <- getDrugDefaultsGlobal(FALSE)$Drug
 
@@ -45,8 +39,8 @@ test_that("suggest yields a table with the appropriate columns", {
   )
 
   targetTable <- data.frame(
-    Time = c("2","20",rep("",4)),
-    Target = c("2","2",rep("",4))
+      Time = c("2","20",rep("",4)),
+      Target = c("2","2",rep("",4))
   )
 
   endTime <- 60
@@ -61,5 +55,4 @@ test_that("suggest yields a table with the appropriate columns", {
                        DEBUG=FALSE)
 
   expect_equal(names(testTable), c("Time", "Dose", "Units", "resultTime", "Drug"))
-
 })

@@ -1,11 +1,7 @@
-outputComments <<- function(..., echo) {
-  ## just silence
-  ## print(paste("outputComments:", ...))
-}
-
-DEBUG <<- FALSE
-
 test_that("simulationPlot yields desired objects", {
+
+  local_mocked_bindings(outputComments = function(..., echo) {})
+  .sprglobals$DEBUG <- FALSE
 
   doseTable <- data.frame(
     Drug = getDrugDefaultsGlobal(FALSE)$Drug[1],
@@ -56,5 +52,4 @@ test_that("simulationPlot yields desired objects", {
   )
 
   expect_equal(names(p), c("plotObject","allResults","plotResults"))
-
 })
