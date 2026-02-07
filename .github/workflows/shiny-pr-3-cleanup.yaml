@@ -8,6 +8,7 @@ on:
 jobs:
   cleanup-pr:
     runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'DEPLOY')
     permissions:
       pull-requests: write
     steps:
@@ -17,7 +18,6 @@ jobs:
           use-public-rspm: true
 
       - name: Delete app
-        if: contains(github.event.pull_request.labels.*.name, 'DEPLOY')
         env:
           SHINY_APP_NAME: ${{ vars.SHINY_APP_NAME }}_PR_${{ github.event.pull_request.number }}
         run: |
@@ -26,7 +26,7 @@ jobs:
           rsconnect::terminateApp(appName = "${{ env.SHINY_APP_NAME }}", account = "${{ vars.SHINY_ACCOUNT }}")
           rsconnect::purgeApp(appName = "${{ env.SHINY_APP_NAME }}", account = "${{ vars.SHINY_ACCOUNT }}")
         shell: Rscript {0}
-      - name: Reset PR labels
+      - name: Remove DEPLOY label
         if: always()   # even if previous step fails
         uses: actions/github-script@v7
         with:
