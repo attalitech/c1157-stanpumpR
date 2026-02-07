@@ -38,5 +38,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: "**Fork detected**\n\nFor security reasons, a maintainer must add the `DEPLOY` label to deploy this PR.\n\*nRemember that any future commits added to the PR will re-deploy the app, so only do this if you trust the author.*"
+              body: "**Fork detected**\n\nFor security reasons, a maintainer must add the `DEPLOY` label to deploy this PR.\n\n*Remember that any future commits added to the PR will re-deploy the app, so only do this if you trust the author.*"
             });
