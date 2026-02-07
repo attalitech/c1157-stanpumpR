@@ -7,7 +7,7 @@ name: Shiny PR 2 Deploy
 
 on:
   pull_request_target:
-    types: [labeled, synchronize, reopened]
+    types: [labeled, synchronize]
   workflow_dispatch:
 
 jobs:
