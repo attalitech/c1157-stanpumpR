@@ -14,7 +14,7 @@ app_ui <- function() {
           tags$a(
             href = config$help_link,
             id = "help_link",
-            "Examples and Help tea3",
+            "Examples and Help tea5",
             target = "_blank"
           )
         )
