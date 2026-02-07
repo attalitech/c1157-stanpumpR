@@ -1,6 +1,5 @@
 # Deploy a PR to shinyapps.io when a PR is ready to be deployed (either because
-# the label was just added toit or because a new commit happened/the PR is
-# reopened and the label exists)
+# the label was just added to it or because a new commit was made)
 
 # Workflow borrows from https://github.com/r-lib/actions/tree/v2/examples
 name: Shiny PR 2 Deploy
@@ -15,8 +14,7 @@ jobs:
     if: |
       github.event_name == 'workflow_dispatch' ||
       (github.event.action == 'labeled' && github.event.label.name == 'DEPLOY') ||
-      (contains(github.event.pull_request.labels.*.name, 'DEPLOY') &&
-        (github.event.action == 'synchronize' || github.event.action == 'reopened'))
+      (github.event.action == 'synchronize' && contains(github.event.pull_request.labels.*.name, 'DEPLOY'))
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
