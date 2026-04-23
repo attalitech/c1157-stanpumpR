@@ -44,7 +44,7 @@ jobs:
       - name: Install fs version 2.0.1
         run: |
           remotes::install_version("fs", version = "2.0.1", upgrade = "never", force = TRUE)
-          stopifnot(utils::packageVersion("fs") == "2.0.0")
+          stopifnot(utils::packageVersion("fs") == "2.0.1")
         shell: Rscript {0}
 
       - name: Authorize and deploy app
