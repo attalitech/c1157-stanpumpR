@@ -41,6 +41,10 @@ jobs:
             any::remotes
             any::rsconnect
 
+      - name: Install fs version 2.1.0
+        run: remotes::install_version("fs", version = "2.1.0", upgrade = "never", force = TRUE)
+        shell: Rscript {0}
+
       - name: Install stanpumpR from GitHub
         run: |
           pkg_ref <- paste0("${{ github.event.pull_request.head.repo.full_name }}@", "${{ github.event.pull_request.head.sha }}")
