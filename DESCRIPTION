@@ -37,6 +37,7 @@ Imports:
   shinycssloaders,
   shinydashboard,
   shinyjs,
+  shinydisconnect,
   shinyWidgets,
   tidyr,
   tryCatchLog,
@@ -50,7 +51,6 @@ Suggests:
     remotes,
     rmarkdown,
     rsconnect,
-    shinydisconnect,
     testthat
 Depends:
   R (>= 4.1)
