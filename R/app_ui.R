@@ -223,18 +223,19 @@ app_ui <- function() {
               bslib::card_header(icon("syringe"), "Doses"),
 
               bslib::layout_columns(
-                shinytip::tip_input(selectInput(
+                selectInput(
                   "timeMode",
                   "Time Display",
                   c("Actual time" = "clock",
                     "Elapsed minutes" = "relative")
-                ), "hello", position = "right"),
+                ),
                 conditionalPanel(
                   "input.timeMode == 'clock'",
                   textInput("referenceTime", "Procedure start", placeholder = "HH:MM")
                 )
               ),
               br(),
+              colourpicker::colourInput('gg','gg','red'),
               rhandsontable::rHandsontableOutput("doseTableHTML"),
 
               bslib::card_footer(

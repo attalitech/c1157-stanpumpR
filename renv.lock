@@ -576,6 +576,42 @@
       "Maintainer": "Matthew Lincoln <matthew.d.lincoln@gmail.com>",
       "Repository": "CRAN"
     },
+    "colourpicker": {
+      "Package": "colourpicker",
+      "Version": "1.3.0",
+      "Source": "Repository",
+      "Title": "A Colour Picker Tool for Shiny and for Selecting Colours in Plots",
+      "Authors@R": "c( person(\"Dean\", \"Attali\",  email = \"daattali@gmail.com\", role = c(\"aut\", \"cre\"), comment= c(ORCID=\"0000-0002-5645-3493\")), person(\"David\", \"Griswold\", email=\"novachild@gmail.com\", role = \"ctb\") )",
+      "Description": "A colour picker that can be used as an input in 'Shiny' apps or Rmarkdown documents. The colour picker supports alpha opacity, custom colour palettes, and many more options. A Plot Colour Helper tool is available as an 'RStudio' Addin, which helps you pick colours to use in your plots. A more generic Colour Picker 'RStudio' Addin is also provided to let  you select colours to use in your R code.",
+      "URL": "https://github.com/daattali/colourpicker, https://daattali.com/shiny/colourInput/",
+      "BugReports": "https://github.com/daattali/colourpicker/issues",
+      "Depends": [
+        "R (>= 3.1.0)"
+      ],
+      "Imports": [
+        "ggplot2",
+        "htmltools",
+        "htmlwidgets (>= 0.7)",
+        "jsonlite",
+        "miniUI (>= 0.1.1)",
+        "shiny (>= 0.11.1)",
+        "shinyjs (>= 2.0.0)",
+        "utils"
+      ],
+      "Suggests": [
+        "knitr (>= 1.7)",
+        "rmarkdown",
+        "rstudioapi (>= 0.5)",
+        "shinydisconnect"
+      ],
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Author": "Dean Attali [aut, cre] (<https://orcid.org/0000-0002-5645-3493>), David Griswold [ctb]",
+      "Maintainer": "Dean Attali <daattali@gmail.com>",
+      "Repository": "CRAN"
+    },
     "commonmark": {
       "Package": "commonmark",
       "Version": "2.0.0",
@@ -4129,43 +4165,6 @@
       "Author": "Dean Attali [aut, cre] (ORCID: <https://orcid.org/0000-0002-5645-3493>)",
       "Maintainer": "Dean Attali <daattali@gmail.com>",
       "Repository": "CRAN"
-    },
-    "shinytip": {
-      "Package": "shinytip",
-      "Version": "0.1.0",
-      "Source": "GitHub",
-      "Title": "Simple Flexible Tooltips for 'Shiny' Apps",
-      "Authors@R": "c( person(\"Dean\", \"Attali\", email = \"daattali@gmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID=\"0000-0002-5645-3493\") ), person(\"Claudio\", \"Holanda\", role = \"aut\", comment = \"Author of balloon.css\" ))",
-      "Description": "Tooltips can be added to any 'Shiny' input and almost any element. Tooltips can be customized through a variety of options such as tooltip position, colour, size, and animation. Works in Rmd/qmd documents as well. Based on the 'balloon.css' project.",
-      "URL": "https://github.com/daattali/shinytip, https://daattali.com/shiny/shinytip-demo/",
-      "BugReports": "https://github.com/daattali/shinytip/issues",
-      "Depends": [
-        "R (>= 3.1.0)"
-      ],
-      "Imports": [
-        "htmltools (>= 0.3.5)",
-        "shiny (>= 1.0.0)"
-      ],
-      "Suggests": [
-        "colourpicker",
-        "shinyalert",
-        "shinycssloaders",
-        "shinydisconnect",
-        "testthat (>= 3.0.0)"
-      ],
-      "License": "MIT + file LICENSE",
-      "Encoding": "UTF-8",
-      "RoxygenNote": "7.2.3",
-      "Roxygen": "list(markdown = TRUE)",
-      "Config/testthat/edition": "3",
-      "Author": "Dean Attali [aut, cre] (ORCID: <https://orcid.org/0000-0002-5645-3493>), Claudio Holanda [aut] (Author of balloon.css)",
-      "Maintainer": "Dean Attali <daattali@gmail.com>",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "daattali",
-      "RemoteRepo": "shinytip",
-      "RemoteRef": "master",
-      "RemoteSha": "d1efdba8b2f037cf97883a702facb25fc22690c3"
     },
     "snowflakeauth": {
       "Package": "snowflakeauth",
