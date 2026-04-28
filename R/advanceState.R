@@ -1,6 +1,7 @@
 #Advance a single state variable over time
 advanceState <- function(l, bolus, infusion, start, L)
 {
+  shinydisconnect::disconnectMessage()
   Z <- lapply(
     1:L,
     function(i) (
