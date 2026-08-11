@@ -20,9 +20,7 @@ jobs:
     if: |
       github.event_name == 'workflow_dispatch' ||
       (github.event.action == 'labeled' && github.event.label.name == 'DEPLOY') ||
-      (github.event.action == 'synchronize' &&
-       contains(github.event.pull_request.labels.*.name, 'DEPLOY') &&
-       github.event.pull_request.head.repo.full_name == github.repository)
+      (github.event.action == 'synchronize' && contains(github.event.pull_request.labels.*.name, 'DEPLOY'))
     runs-on: ubuntu-24.04
     # Ties this secret-bearing job to a GitHub Environment. Configure required
     # reviewers for the `pr-preview` environment in repo Settings > Environments
