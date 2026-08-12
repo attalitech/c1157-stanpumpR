@@ -48,7 +48,7 @@ app_ui <- function() {
       ),
 
       bslib::nav_panel(
-        "Simulator",
+        "Simulator22000",
         icon = icon("chart-line"),
         bslib::layout_sidebar(
           sidebar = bslib::sidebar(
